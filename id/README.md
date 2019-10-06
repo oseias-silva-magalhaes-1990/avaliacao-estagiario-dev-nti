@@ -2,20 +2,21 @@
 
 Altere este arquivo preenchendo os campos:
 
-Nome:
+Nome: Oséias Silva Chagas Magalhães
 
-E-mail:
+E-mail: 10.oseias@gmail.com
 
-Telefone:
+Telefone: 42 999833401
 
-Cidade:
+Cidade: Ponta Grossa - PR
 
-Instituição de Ensino:
+Instituição de Ensino: UEPG (Universidade Estadual de Ponta Grossa)
 
-RA:
+RA: 15013426
 
-Curso:
+Curso: Engenharia de Computação
 
-Período/Série:
+Período/Série: 4° Ano
 
 Minha experiencia com desenvolvimento:
+Grande parte do meu conhecimento em desenvolvimento foi obtido durante a graduação, no curso de engenharia de comuputação na UEPG, tendo contato com algumas linguagens como, C, C++, Java, SGBD, CSS, HTML5 e CSS. Para a disciplina de projeto de software escolhi utilizar a linguagem Python como um desafio pessoal para o aprendizado, onde foi possível colocar em prática parte do que foi aprendido até o momento.
