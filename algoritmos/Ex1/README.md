@@ -2,11 +2,14 @@ Neste exercío tentei utilizar o máximo de conhecimento possível em tempo opor
 exercicios.
 Criei um banco de dados denominado comercio que possui duas tabelas venda e produto.
 Utilizando o MySQL Workbench desenvolvi as tabelas abaixo:
+
 #Criando o banco
- CREATE DATABASE comercio;
+
+CREATE DATABASE comercio;
 
 #Criando a tabela produto
- CREATE TABLE `produto` (
+
+CREATE TABLE `produto` (
   `id_produto` int(10) NOT NULL,
   `codigo` int(10) NOT NULL,
   `nome` varchar(30) NOT NULL,
@@ -15,25 +18,30 @@ Utilizando o MySQL Workbench desenvolvi as tabelas abaixo:
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #Definindo id_produto como chave primária
+
 ALTER TABLE `produto`
   ADD PRIMARY KEY (`id_produto`);
   
 #Definindo id_produto como auto-increment
+
 ALTER TABLE `produto`
   MODIFY `id_produto` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
   
  #Criando a tabela venda
- CREATE TABLE `venda` (
+ 
+CREATE TABLE `venda` (
   `numero` int(10) NOT NULL,
   `dhVenda` datetime NOT NULL,
   `itensVendidos` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #Definindo numero como chave primária
+
 ALTER TABLE `venda`
   ADD PRIMARY KEY (`numero`);
 
 #Definindo numero como auto_increment
+
 ALTER TABLE `venda`
   MODIFY `numero` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
@@ -50,16 +58,9 @@ Todo Cadastro é registrado na tabela cadastro do banco de dados comercio e arma
 quantidade.
 Para realização dos testes durante o desenvolvmento, foi necessário inserir alguns produtos como pode ser visto abaixo:
 
-Ex.:
+Exemplo de inserção:
 INSERT INTO `produto` (`id_produto`, `codigo`, `nome`, `valorUnitario`, `quantidade`) VALUES
-(1, 1, 'tv32', '1000.00', 935),
-(2, 2, 'tv42', '2000.00', 946),
-(3, 3, 'tv50pol', '3000.00', 990),
-(4, 4, 'tv20pol', '4000.00', 990),
-(5, 5, 'tv29', '5000.00', 990),
-(6, 6, 'tv46', '25250.00', 25630),
-(7, 7, 'somPortátil', '125.00', 560),
-(8, 10, 'radio', '256.25', 9);
+(1, 1, 'tv32', '1000.00', 900);
 
 
 Toda venda realizada é salva na tabela venda, com os dados de hora e data da venda, e uma coluna itensVendidos do tipo longtext recebe
@@ -68,13 +69,9 @@ O número da venda registrado é auto-incremento que varia a cada inserção, e 
 dhVenda = datetime.current()
 itensVendidos += (codigo, quantidade, valor com desconto),...,(codigo, quantidade, valor com desconto),valor total
 
-Ex.:
+Exemplo de registro de venda:
 INSERT INTO `venda` (`numero`, `dhVenda`, `itensVendidos`) VALUES
-(1, '2019-10-07 14:02:00', '(1,2,2000.0),2000.0'),
-(2, '2019-10-07 14:03:00', '(2,10,20000.0),(1,5,5000.0),25000.0'),
-(3, '2019-10-07 14:04:00', '(1,10,10000.0),(2,5,10000.0),20000.0'),
-(4, '2019-10-07 14:11:00', '(10,1,256.25),256.25'),
-(5, '2019-10-07 14:22:00', '(1,2,2000.0),2000.0');
+(1, '2019-10-07 14:02:00', '(1,20,2000.0),39600.00');
 
 Para cada produto que é vendido a venda é registrada e o produto é dcrementado do estoque, sendo atualizado a tabela dos produtos a cada
 venda realizada.
@@ -96,5 +93,5 @@ Foram utilizadas as bibliotecas PyQt5 para as interfaces gráficas, a datetime, 
 banco de dados.
 
 A pasta do código está localizado neste repositório no formato .rar com nome Sistema de Comercio.rar
-Como o arquivo executável possui um tamanho maior que o permitido n ogitHub estou disponiblizando o link para download abaixo:
+Como o arquivo executável possui um tamanho maior que o permitido no gitHub estou disponiblizando o link para download abaixo:
 https://drive.google.com/open?id=19RK_JItINgPuK2bmYBnPcC6rWiDk3IBc
