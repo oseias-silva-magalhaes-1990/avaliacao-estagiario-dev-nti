@@ -3,11 +3,11 @@ exercicios.
 Criei um banco de dados denominado comercio que possui duas tabelas venda e produto.
 Utilizando o MySQL Workbench desenvolvi as tabelas abaixo:
 
-#Criando o banco
+1º Criando o banco
 
 CREATE DATABASE comercio;
 
-#Criando a tabela produto
+2º Criando a tabela produto
 
 CREATE TABLE `produto` (
   `id_produto` int(10) NOT NULL,
@@ -17,17 +17,17 @@ CREATE TABLE `produto` (
   `quantidade` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-#Definindo id_produto como chave primária
+3º Definindo id_produto como chave primária
 
 ALTER TABLE `produto`
   ADD PRIMARY KEY (`id_produto`);
   
-#Definindo id_produto como auto-increment
+4º Definindo id_produto como auto-increment
 
 ALTER TABLE `produto`
   MODIFY `id_produto` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
   
- #Criando a tabela venda
+5º Criando a tabela venda
  
 CREATE TABLE `venda` (
   `numero` int(10) NOT NULL,
@@ -35,12 +35,12 @@ CREATE TABLE `venda` (
   `itensVendidos` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-#Definindo numero como chave primária
+6º Definindo numero como chave primária
 
 ALTER TABLE `venda`
   ADD PRIMARY KEY (`numero`);
 
-#Definindo numero como auto_increment
+7º Definindo numero como auto_increment
 
 ALTER TABLE `venda`
   MODIFY `numero` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
@@ -57,6 +57,7 @@ mesmas abertas ao mesmo tempo.
 Todo Cadastro é registrado na tabela cadastro do banco de dados comercio e armazena o código do produto, nome, valor unitário e a 
 quantidade.
 Para realização dos testes durante o desenvolvmento, foi necessário inserir alguns produtos como pode ser visto abaixo:
+
 
 Exemplo de inserção:
 INSERT INTO `produto` (`id_produto`, `codigo`, `nome`, `valorUnitario`, `quantidade`) VALUES
