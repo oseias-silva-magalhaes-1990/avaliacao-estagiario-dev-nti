@@ -1,7 +1,5 @@
-Neste exercío tentei utilizar o máximo de conhecimento possível em tempo oportuno para que houvesse tempo de resolução dos demais 
-exercicios.
-Criei um banco de dados denominado comercio que possui duas tabelas venda e produto.
-Utilizando o MySQL Workbench desenvolvi as tabelas abaixo:
+Foi criado um banco de dados denominado comercio que possui duas tabelas venda e produto.
+Utilizando o MySQL Workbench foram desenvolvidas as tabelas abaixo:
 
 1º Criando o banco
 
@@ -46,14 +44,13 @@ ALTER TABLE `venda`
   MODIFY `numero` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
-Utilizei a Linguagem Python como ferramenta para desenvolvimento orientado a on=bjeto das classes e interfaces do sistema de comércio.
-Criei as classes BDProduto, BDVenda, Venda, Produto, TelaVenda, TelaCadastro, TelaMensagem, MenuPrincipal, Controller.
-Trabalhi utilizando algumas validações de banco para verificar se por exemplo um produto já estava cadastrado, verificar se um 
+Utilizando a Linguagem Python como ferramenta para desenvolvimento orientado a objeto das classes e interfaces do sistema de comércio.
+Foram criadas as classes BDProduto, BDVenda, Venda, Produto, TelaVenda, TelaCadastro, TelaMensagem, MenuPrincipal, Controller.
+Utilizando algumas validações de banco para verificar se por exemplo um produto já estava cadastrado, verificar se um 
 produto a ser vendido existia no sistema, e para cada caso específico mostrando uma mensagem de erro ou alerta para o usuário.
 Passando a concluir a venda apenas quando todos os requisitos fossem atendidos, e os eventuais erros corrigidos.
 
-Na classe TelaMenuPrincipal criei dois botões sendo um Vender e outro Cadastrar, onde pode-se alternar entre as janelas mantendo as 
-mesmas abertas ao mesmo tempo.
+Na classe TelaMenuPrincipal foram criados dois botões sendo um Vender e outro Cadastrar, onde pode-se alternar entre as janelas mantendo as mesmas abertas ao mesmo tempo.
 Todo Cadastro é registrado na tabela cadastro do banco de dados comercio e armazena o código do produto, nome, valor unitário e a 
 quantidade.
 Para realização dos testes durante o desenvolvmento, foi necessário inserir alguns produtos como pode ser visto abaixo:
